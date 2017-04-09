@@ -1,5 +1,6 @@
 package findhosp.com.findhosp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,5 +47,12 @@ public class ChooseModeActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
 
-    }
+        //For Near
+        if (v==nearImageView) {
+            Intent intent = new Intent(ChooseModeActivity.this, NearActivity.class);
+            intent.putExtra("Index", indexAnInt);
+            startActivity(intent);
+        }
+
+    }   //onClick
 }   //Main Class
